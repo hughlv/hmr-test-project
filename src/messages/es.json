@@ -1,0 +1,21 @@
+{
+  "Index": {
+    "title": "Next.js 15.3 con React 19",
+    "description": "Usando Tailwind v4 y componentes shadcn/ui",
+    "content": "Este es un proyecto de ejemplo que muestra Next.js 15.3, React 19, Tailwind v4 y componentes shadcn/ui trabajando juntos.",
+    "edit": "Comienza editando",
+    "save": "Guarda y ve tus cambios al instante",
+    "deploy": "Desplegar ahora",
+    "docs": "Leer documentación",
+    "learn": "Aprender",
+    "examples": "Ejemplos",
+    "nextjs": "Ir a nextjs.org →",
+    "buttons": {
+      "primary": "Botón Principal",
+      "secondary": "Secundario",
+      "outline": "Contorno",
+      "cancel": "Cancelar",
+      "save": "Guardar Cambios"
+    }
+  }
+}
