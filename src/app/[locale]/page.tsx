@@ -20,6 +20,7 @@ import { UserForm } from "@/components/UserForm";
 import { HmrTest } from "@/components/HmrTest";
 import { ArrayTest } from "@/components/ArrayTest";
 import { ToastDemo } from "@/components/ToastDemo";
+import { ResponsiveDemo } from "@/components/ResponsiveDemo";
 
 export default function Home() {
   const t = useTranslations("Index");
@@ -93,6 +94,11 @@ export default function Home() {
                   Toast Notifications
                 </h3>
                 <ToastDemo />
+              </div>
+
+              <div className="border-t pt-6">
+                <h3 className="text-sm font-medium mb-4">Responsive Demo</h3>
+                <ResponsiveDemo />
               </div>
             </div>
           </CardContent>
