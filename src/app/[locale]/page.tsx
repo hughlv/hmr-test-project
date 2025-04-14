@@ -16,6 +16,7 @@ import { useTranslations } from "next-intl";
 import { Switch } from "@/components/ui/switch";
 import { useState } from "react";
 import { IconSwitch } from "@/components/IconSwitch";
+import { UserForm } from "@/components/UserForm";
 
 export default function Home() {
   const t = useTranslations("Index");
@@ -71,6 +72,10 @@ export default function Home() {
 
               <div className="border-t pt-6">
                 <IconSwitch />
+              </div>
+
+              <div className="border-t pt-6">
+                <UserForm />
               </div>
             </div>
           </CardContent>
