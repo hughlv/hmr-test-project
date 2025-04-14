@@ -5,6 +5,7 @@ import "@/app/globals.css";
 import { getMessages } from "next-intl/server";
 import { use } from "react";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function LocaleLayout({
             <LanguageSwitcher />
             {children}
           </NextIntlClientProvider>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

@@ -19,6 +19,7 @@ import { IconSwitch } from "@/components/IconSwitch";
 import { UserForm } from "@/components/UserForm";
 import { HmrTest } from "@/components/HmrTest";
 import { ArrayTest } from "@/components/ArrayTest";
+import { ToastDemo } from "@/components/ToastDemo";
 
 export default function Home() {
   const t = useTranslations("Index");
@@ -85,6 +86,13 @@ export default function Home() {
 
               <div className="border-t pt-6">
                 <UserForm />
+              </div>
+
+              <div className="border-t pt-6">
+                <h3 className="text-sm font-medium mb-4">
+                  Toast Notifications
+                </h3>
+                <ToastDemo />
               </div>
             </div>
           </CardContent>
