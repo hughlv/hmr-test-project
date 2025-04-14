@@ -5,3 +5,4 @@ alwaysApply: true
 ---
 
 1. use Nextjs 15, React 19, TailwindCSS v4.0;
+2. always use pnpm;
