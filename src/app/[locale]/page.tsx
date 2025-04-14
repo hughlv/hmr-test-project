@@ -15,6 +15,7 @@ import { ColorPicker } from "@/components/ColorPicker";
 import { useTranslations } from "next-intl";
 import { Switch } from "@/components/ui/switch";
 import { useState } from "react";
+import { IconSwitch } from "@/components/IconSwitch";
 
 export default function Home() {
   const t = useTranslations("Index");
@@ -52,18 +53,24 @@ export default function Home() {
                 <ColorPicker />
               </div>
 
-              <div className="flex items-center space-x-2">
-                <Switch
-                  id="airplane-mode"
-                  checked={checked}
-                  onCheckedChange={setChecked}
-                />
-                <label
-                  htmlFor="airplane-mode"
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                >
-                  Airplane Mode
-                </label>
+              <div className="border-t pt-6">
+                <div className="flex items-center space-x-2">
+                  <Switch
+                    id="airplane-mode"
+                    checked={checked}
+                    onCheckedChange={setChecked}
+                  />
+                  <label
+                    htmlFor="airplane-mode"
+                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  >
+                    Airplane Mode
+                  </label>
+                </div>
+              </div>
+
+              <div className="border-t pt-6">
+                <IconSwitch />
               </div>
             </div>
           </CardContent>

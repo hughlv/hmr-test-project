@@ -4,6 +4,7 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import "@/app/globals.css";
 import { getMessages } from "next-intl/server";
 import { use } from "react";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,14 +27,21 @@ export default function LocaleLayout({
   const messages = use(getMessages({ locale }));
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NextIntlClientProvider messages={messages}>
-          <LanguageSwitcher />
-          {children}
-        </NextIntlClientProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider messages={messages}>
+            <LanguageSwitcher />
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
