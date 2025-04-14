@@ -13,9 +13,12 @@ import {
 import { VolumeControl } from "@/components/VolumeControl";
 import { ColorPicker } from "@/components/ColorPicker";
 import { useTranslations } from "next-intl";
+import { Switch } from "@/components/ui/switch";
+import { useState } from "react";
 
 export default function Home() {
   const t = useTranslations("Index");
+  const [checked, setChecked] = useState(false);
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -47,6 +50,20 @@ export default function Home() {
 
               <div className="border-t pt-6">
                 <ColorPicker />
+              </div>
+
+              <div className="flex items-center space-x-2">
+                <Switch
+                  id="airplane-mode"
+                  checked={checked}
+                  onCheckedChange={setChecked}
+                />
+                <label
+                  htmlFor="airplane-mode"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Airplane Mode
+                </label>
               </div>
             </div>
           </CardContent>
