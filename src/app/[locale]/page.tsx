@@ -17,6 +17,8 @@ import { Switch } from "@/components/ui/switch";
 import { useState } from "react";
 import { IconSwitch } from "@/components/IconSwitch";
 import { UserForm } from "@/components/UserForm";
+import { HmrTest } from "@/components/HmrTest";
+import { ArrayTest } from "@/components/ArrayTest";
 
 export default function Home() {
   const t = useTranslations("Index");
@@ -33,6 +35,13 @@ export default function Home() {
           height={38}
           priority
         />
+
+        {/* HMR Test Components */}
+        <div className="w-full max-w-2xl space-y-6">
+          <h1 className="text-2xl font-bold">HMR Testing Components</h1>
+          <HmrTest />
+          <ArrayTest />
+        </div>
 
         <Card className="w-full max-w-md">
           <CardHeader>
